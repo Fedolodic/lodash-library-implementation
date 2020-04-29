@@ -14,6 +14,19 @@ _ = {
             end = temp;
         }
         return start <= number && number < end;
+    },
+    words(string) {
+        const splitString = string.split(' ');
+        const symbols = /[^\w\s]/;
+        const resultArr = [];
+
+        for (const string of splitString) {
+            const newString = string.replace(symbols, '');
+            if (newString !== '') {
+                resultArr.push(newString);
+            }
+        }
+        return resultArr;
     }
 }
 
