@@ -47,6 +47,11 @@ _ = {
     },
     has(object, key) {
         return Object.keys(object).includes(key);
+    },
+    invert(object) {
+        const newObject = {};
+        Object.keys(object).forEach(key => newObject[object[key]] = key);
+        return newObject;
     }
 }
 
