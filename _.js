@@ -44,6 +44,9 @@ _ = {
             paddedString = " " + paddedString + " "
         }
         return paddedString + extraPadding;
+    },
+    has(object, key) {
+        return Object.keys(object).includes(key);
     }
 }
 
