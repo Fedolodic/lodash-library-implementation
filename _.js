@@ -28,6 +28,23 @@ _ = {
         }
         return resultArr;
     },
+    pad(string, length) {
+        let paddingAmount = length - string.length;
+        let extraPadding = "";
+        let paddedString = string;
+
+        if (paddingAmount <= 0) {
+            return string;
+        } else if (paddingAmount % 2 !== 0) {
+            paddingAmount--;
+            extraPadding = " ";
+        }
+
+        for (paddingAmount; paddingAmount > 0; paddingAmount -= 2) {
+            paddedString = " " + paddedString + " "
+        }
+        return paddedString + extraPadding;
+    }
 }
 
 // Do not write or modify code below this line.
