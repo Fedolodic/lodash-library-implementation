@@ -52,6 +52,16 @@ _ = {
         const newObject = {};
         Object.keys(object).forEach(key => newObject[object[key]] = key);
         return newObject;
+    },
+    findKey(object, predicate) {
+        for (let key in object) {
+            const value = object[key]
+            const predicateReturnValue = predicate(value);
+            if (predicateReturnValue) {
+                return key;
+            }
+        }
+        return undefined;
     }
 }
 
