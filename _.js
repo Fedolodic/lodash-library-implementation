@@ -62,6 +62,12 @@ _ = {
             }
         }
         return undefined;
+    },
+    drop(array, n) {
+        if (typeof n === 'undefined') {
+            n = 1;
+        }
+        return array.slice(n);
     }
 }
 
