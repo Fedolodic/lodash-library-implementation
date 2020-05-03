@@ -68,6 +68,13 @@ _ = {
             n = 1;
         }
         return array.slice(n);
+    },
+    dropWhile(array, predicate) {
+        const dropNumber = array.findIndex((element, index) => {
+            return !predicate(element, index, array);
+        });
+        const droppedArray = this.drop(array, dropNumber);
+        return droppedArray;
     }
 }
 
